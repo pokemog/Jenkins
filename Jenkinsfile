@@ -1,12 +1,11 @@
+#!/usr/bin/env groovy
 pipeline {
     agent any 
 
     stages {
         stage('Build') { 
             steps {
-                step {
-                def output = bat returnStdout: true, script: 'dir'
-                }
+                bat returnStdout: true, script: 'dir'
             }
         }
         stage('Test') {
