@@ -4,8 +4,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                def output = 'This is my output'
-                println output
+                bat returnStdout: true, script: 'dir'
             }
         }
         stage('Test') {
