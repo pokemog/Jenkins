@@ -3,8 +3,9 @@ pipeline {
 
     stages {
         stage('Build') { 
-            steps { 
-                println 'echo'
+            steps {
+                def output = 'This is my output'
+                println output
             }
         }
         stage('Test') {
