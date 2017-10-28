@@ -4,10 +4,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps { 
-                define stdout = bat(
-                    returnStdout: true,
-                    script: 'dir'
-                )
+                define stdout = bat returnStdout: true, script: 'dir'
                 println = stdout
             }
         }
