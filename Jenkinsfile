@@ -3,8 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        pwd(tmp: true)
-        validateDeclarativePipeline 'Jenkinsfile'
+          bat (returnStdout: true, @script: dir)
       }
     }
     stage('Test') {
