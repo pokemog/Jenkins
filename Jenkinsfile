@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-          bat (returnStdout: true, script: @'dir')
+          powershell (returnStdout: true, script: 'Write-Output "Hello World!"')
       }
     }
     stage('Test') {
