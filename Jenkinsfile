@@ -8,6 +8,8 @@ pipeline {
                 script {
                     def msg = powershell (returnStdout: true, script: 'Write-Output "Hello World!"')
                     println msg
+                    def dirOutput = powershell ( returnStdout: true, script: 'Get-ChildItem')
+                    println dirOutput
                 }
             }
         }
