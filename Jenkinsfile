@@ -18,9 +18,8 @@ pipeline {
         }
     }
     stage('Deploy') {
-      steps {
-        bat 'echo Deploy'
-      }
+        steps {
+            bat 'echo Deploy'
+        }
     }
-  }
 }
