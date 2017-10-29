@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-          powershell (returnStdout: true, script: 'Write-Output "Hello World!"')
+          def msg = powershell (returnStdout: true, script: 'Write-Output "Hello World!"')
+          println msg
       }
     }
     stage('Test') {
