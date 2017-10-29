@@ -11,15 +11,15 @@ pipeline {
                 }
             }
         }
-    }
-    stage('Test') {
-        steps {
-            bat 'echo Test'
+        stage('Test') {
+            steps {
+                bat 'echo Test'
+            }
         }
-    }
-    stage('Deploy') {
-        steps {
-            bat 'echo Deploy'
+        stage('Deploy') {
+            steps {
+                bat 'echo Deploy'
+            }
         }
     }
 }
